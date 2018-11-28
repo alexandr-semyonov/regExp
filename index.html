@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RegExp</title>
 </head>
+
 <body>
-    
+    <h2>Итого, рецепты</h2>
+    <p>Методы становятся гораздо понятнее, если разбить их использование по задачам, которые нужны в реальной жизни.</p>
+    <dl>
+        <dt>Для поиска только одного совпадения:</dt>
+        <dd>
+            <ul>
+                <li>Найти позицию первого совпадения – <code>str.search(reg)</code>.</li>
+            </ul>
+        </dd>
+    </dl>
+    <ul>
+        <li>Найти само совпадение – <code>str.match(reg)</code>.</li>
+        <li>Проверить, есть ли хоть одно совпадение – <code>regexp.test(str)</code> или <code>str.search(reg) != -1</code>.</li>
+        <li>Найти совпадение с нужной позиции – <code>regexp.exec(str)</code>, начальную позицию поиска задать в <code>regexp.lastIndex</code>.</li>
+    </ul>
+    <dl>
+        <dt>Для поиска всех совпадений:</dt>
+        <dd>
+            <ul>
+                <li>Найти массив совпадений – <code>str.match(reg)</code>, с флагом <code>g</code>.</li>
+            </ul>
+        </dd>
+    </dl>
+    <ul>
+        <li>Получить все совпадения, с подробной информацией о каждом – <code>regexp.exec(str)</code> с флагом <code>g</code>,
+            в цикле.</li>
+    </ul>
+    <dl>
+        <dt>Для поиска-и-замены:</dt>
+        <dd>
+            <ul>
+                <li>Замена на другую строку или результат функции – <code>str.replace(reg, str|func)</code></li>
+            </ul>
+        </dd>
+        <dt>Для разбивки строки на части:</dt>
+        <dd>
+            <ul>
+                <li><code>str.split(str|reg)</code></li>
+            </ul>
+        </dd>
+    </dl>
+    <p>Зная эти методы, мы уже можем использовать регулярные выражения.</p>
+    <p>Конечно, для этого желательно хорошо понимать их синтаксис и возможности, так что переходим к ним дальше.</p>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
